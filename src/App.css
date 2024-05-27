@@ -1,0 +1,63 @@
+/* src/App.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fce4ec;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f06292;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 25px;
+  margin-bottom: 20px;
+  animation: slideIn 0.5s ease-out;
+}
+
+.App-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 10px;
+  animation: dotBlink 1.5s infinite;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes dotBlink {
+  0%,
+  100% {
+    background-color: #fff;
+  }
+  50% {
+    background-color: #f48fb1;
+  }
+}

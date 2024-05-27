@@ -1,0 +1,89 @@
+/* src/components/Leaderboard.css */
+.leaderboard-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #f8bbd0, #f48fb1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.leaderboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.slippage-button,
+.dropdown-button,
+.action-button {
+  background-color: #f06292;
+  color: white;
+}
+
+.leaderboard-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.leaderboard-table th,
+.leaderboard-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.leaderboard-table th {
+  background-color: #f48fb1;
+}
+
+.leaderboard-table tr:nth-child(even) {
+  background-color: #f8bbd0;
+}
+
+@media (max-width: 600px) {
+  .leaderboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .leaderboard-table th,
+  .leaderboard-table td {
+    display: block;
+    text-align: right;
+  }
+
+  .leaderboard-table th::before,
+  .leaderboard-table td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+  }
+
+  .leaderboard-table th,
+  .leaderboard-table td {
+    text-align: left;
+  }
+}
